@@ -20,7 +20,7 @@ with st.sidebar:
     # except Exception as e:
     #     st.error(f"Error loading image: {e}")
     st.markdown("# Welcome to YOSA!")
-    st.markdown("# Accelerate your research!")
+    st.markdown("## Accelerate your research")
 
 # Hardcoded API keys
 NEWS_API_KEY = '777c077b23d84ef08c1f03ea654bb1b8'
