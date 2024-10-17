@@ -1,0 +1,14 @@
+streamlit
+openai
+langchain
+langchain_community
+faiss-cpu
+tiktoken
+moviepy
+python-docx
+plotly
+requests
+textblob
+wordcloud
+matplotlib
+yfinance
