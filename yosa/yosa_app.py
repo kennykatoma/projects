@@ -9,17 +9,41 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import yfinance as yf
 
-# Inline CSS for light background
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background-color: #f9f9f9;  /* Light background color */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# Toggle theme state
+if 'theme' not in st.session_state:
+    st.session_state.theme = 'light'  # Default theme
+
+def toggle_theme():
+    st.session_state.theme = 'dark' if st.session_state.theme == 'light' else 'light'
+
+# Theme toggle button
+st.button("Toggle Theme", on_click=toggle_theme)
+
+# Apply the theme
+if st.session_state.theme == 'dark':
+    st.markdown(
+        """
+        <style>
+        .stApp {
+            background-color: #2e2e2e;  /* Dark background */
+            color: white;                /* Light text */
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+else:
+    st.markdown(
+        """
+        <style>
+        .stApp {
+            background-color: #f9f9f9;  /* Light background */
+            color: black;                /* Dark text */
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
 # Hardcoded API keys
 NEWS_API_KEY = '777c077b23d84ef08c1f03ea654bb1b8'
