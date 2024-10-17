@@ -15,10 +15,10 @@ if 'theme' not in st.session_state:
 
 # Sidebar
 with st.sidebar:
-    # try:
-    #     st.image("yosa/yosa.png", width=200)  # Adjust width as needed
-    # except Exception as e:
-    #     st.error(f"Error loading image: {e}")
+    try:
+        st.image("yosa/yosa.png", width=200)  # Adjust width as needed
+    except Exception as e:
+        st.error(f"Error loading image: {e}")
     st.markdown("# Welcome to YOSA!")
     st.markdown("## Accelerate your research")
 
@@ -81,7 +81,7 @@ def add_custom_css():
 add_custom_css()
 
 # Add the logo using Streamlit's st.image()
-st.image('yosa/yosa.png', width=200)
+# st.image('yosa/yosa.png', width=200)
 
 # Streamlit UI
 st.markdown("<div class='title-header'>Your Own Stock Advisor (YOSA)</div>", unsafe_allow_html=True)
