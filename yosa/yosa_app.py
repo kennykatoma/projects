@@ -84,7 +84,7 @@ add_custom_css()
 st.image('yosa/yosa.png', width=200)
 
 # Streamlit UI
-st.markdown("<div class='title-header'>Your Own Stock Advisor</div>", unsafe_allow_html=True)
+st.markdown("<div class='title-header'>Your Own Stock Advisor (YOSA)</div>", unsafe_allow_html=True)
 
 # Input fields for API key and stock symbol
 # chatgpt_api_key = st.text_input("Enter your OpenAI API Key", type="password")
