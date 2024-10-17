@@ -16,7 +16,7 @@ if 'theme' not in st.session_state:
 # Sidebar
 with st.sidebar:
     try:
-        st.image("yosa.png", width=200)  # Adjust width as needed
+        st.image("yosa/yosa.png", width=200)  # Adjust width as needed
     except Exception as e:
         st.error(f"Error loading image: {e}")
     st.markdown("## Welcome!")
