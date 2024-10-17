@@ -9,6 +9,10 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import yfinance as yf
 
+# Load custom CSS for light background
+with open('style.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
 # Hardcoded API keys
 NEWS_API_KEY = '777c077b23d84ef08c1f03ea654bb1b8'
 
