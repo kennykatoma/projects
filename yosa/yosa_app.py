@@ -74,7 +74,8 @@ st.image('yosa.png', width=200)
 st.markdown("<div class='title-header'>Your Own Stock Advisor</div>", unsafe_allow_html=True)
 
 # Input fields for API key and stock symbol
-chatgpt_api_key = st.text_input("Enter your OpenAI API Key", type="password")
+# chatgpt_api_key = st.text_input("Enter your OpenAI API Key", type="password")
+chatgpt_api_key = st.secrets["OPENAI_API_KEY"]
 stock_symbol = st.text_input("Enter Stock Symbol (e.g., AAPL)")
 
 # Dropdown to select ChatGPT model
