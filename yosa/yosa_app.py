@@ -68,7 +68,7 @@ def add_custom_css():
 add_custom_css()
 
 # Add the logo using Streamlit's st.image()
-st.image('yosa.png', width=200)
+# st.image('yosa.png', width=200)
 
 # Streamlit UI
 st.markdown("<div class='title-header'>Your Own Stock Advisor</div>", unsafe_allow_html=True)
