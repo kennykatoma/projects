@@ -22,10 +22,6 @@ with st.sidebar:
     st.markdown("# Welcome to YOSA!")
     st.markdown("## Accelerate your research")
 
-# Hardcoded API keys
-NEWS_API_KEY = '777c077b23d84ef08c1f03ea654bb1b8'
-
-
 # Function to fetch stock data using yfinance
 def fetch_stock_data(symbol: str) -> pd.DataFrame:
     data = yf.download(symbol, period='1y')  # Fetch 1 year of data for the stock symbol
@@ -89,6 +85,7 @@ st.markdown("<div class='title-header'>Your Own Stock Advisor (YOSA)</div>", uns
 # Input fields for API key and stock symbol
 # chatgpt_api_key = st.text_input("Enter your OpenAI API Key", type="password")
 chatgpt_api_key = st.secrets["OPENAI_API_KEY"]
+NEWS_API_KEY = st.secrets["NEWS_API_KEY"]
 stock_symbol = st.text_input("Enter Stock Symbol (e.g., AAPL)")
 
 # Dropdown to select ChatGPT model
